@@ -32,7 +32,7 @@ export default function Footer() {
               A <Link to="/" className="text-white-soft hover:text-gold-primary transition-colors hover:underline">RedGoldCrew</Link> Product
             </div>
             <div className="text-gray-mid text-[0.95rem] hover:text-white-soft transition-colors cursor-default">
-              📍 Chennai, Tamil Nadu, India
+              📍 Madurai, Tamil Nadu, India
             </div>
           </RevealItem>
 
@@ -68,7 +68,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-border-red/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-mid/60">
           <div>© {new Date().getFullYear()} Aayiram by RedGoldCrew.</div>
           <div className="flex items-center gap-1 border border-border-red/30 px-3 py-1 rounded-full bg-navy-darkest/30">
-            Made with <span className="text-red-primary animate-pulse inline-block mx-1">♥</span> in Chennai, India
+            Made with <span className="text-red-primary animate-pulse inline-block mx-1">♥</span> in Madurai, India
           </div>
         </div>
         </Reveal>

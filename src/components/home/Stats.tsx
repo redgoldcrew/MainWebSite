@@ -41,7 +41,7 @@ export default function Stats() {
     { num: 3, suffix: "+", label: "IN DEVELOPMENT", sub: "Across web and mobile" },
     { num: 4, suffix: "", label: "TEAM MEMBERS", sub: "Engineers, designers, security" },
     { num: 100, suffix: "%", label: "PRIVACY COMMITMENT", sub: "Zero server-side user data" },
-    { num: 2024, suffix: "", label: "YEAR FOUNDED", sub: "Chennai, Tamil Nadu, India" },
+    { num: 2024, suffix: "", label: "YEAR FOUNDED", sub: "Madurai, Tamil Nadu, India" },
     { num: 0, suffix: "", label: "OUTSIDE FUNDING", sub: "Bootstrapped and proud" }
   ];
 

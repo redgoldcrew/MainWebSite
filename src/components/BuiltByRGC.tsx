@@ -19,7 +19,7 @@ export default function BuiltByRGC() {
 
         <Reveal delay={0.18}>
           <p className="font-nunito text-gray-mid text-[1.05rem] leading-relaxed mb-8">
-            Aayiram is one of many products being built by RedGoldCrew — a Chennai-based
+            Aayiram is one of many products being built by RedGoldCrew — a Madurai-based
             team focused on privacy-first software for everyday people.
           </p>
         </Reveal>

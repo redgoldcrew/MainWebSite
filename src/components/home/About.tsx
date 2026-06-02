@@ -61,7 +61,7 @@ export default function About() {
 
             <div className="bg-navy-mid border border-red-primary rounded-xl p-5 mt-8 w-full max-w-[300px]">
               <div className="flex items-center gap-3 mb-3 font-nunito text-gray-mid text-[0.9rem]">
-                <span>📍</span> Chennai, Tamil Nadu, India
+                <span>📍</span> Madurai, Tamil Nadu, India
               </div>
               <div className="flex items-center gap-3 mb-3 font-nunito text-gray-mid text-[0.9rem]">
                 <span>🗓️</span> Founded · 2024
@@ -104,7 +104,7 @@ export default function About() {
                className="space-y-6 font-nunito text-gray-mid text-[1rem] leading-[1.75] mb-12 max-w-2xl"
             >
               <p>
-                RedGoldCrew is a product-focused software development organisation founded in Chennai, Tamil Nadu in 2024. We are a small, tightly-knit team of engineers, designers, and security specialists who share one obsession: building digital products that people actually rely on.
+                RedGoldCrew is a product-focused software development organisation founded in Madurai, Tamil Nadu in 2024. We are a small, tightly-knit team of engineers, designers, and security specialists who share one obsession: building digital products that people actually rely on.
               </p>
               <p>
                 The name RedGoldCrew comes from our identity — red for the relentless drive to ship, gold for the standard of quality we hold our work to, and crew because we build as a unit, not as individuals. Every product carries all three.

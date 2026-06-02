@@ -3,7 +3,7 @@ import { Reveal } from '../motion/Reveal';
 export default function Marquee() {
   const items = [
     'Privacy-First Products',
-    'Built in Chennai',
+    'Built in Madurai',
     'Android Native',
     'Offline-First Architecture',
     'Zero Server Dependency',

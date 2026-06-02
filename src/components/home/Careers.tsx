@@ -51,7 +51,7 @@ export default function Careers() {
       badgeText: "OPEN",
       badgeColorStyle: "bg-green-500 text-navy-darkest",
       title: "Android Developer",
-      typeLabel: "Full-time · Chennai · Equity",
+      typeLabel: "Full-time · Madurai · Equity",
       desc: "Kotlin-first Android developer who cares about clean architecture, offline-first design, and building apps people actually use daily.",
       skills: ["Kotlin", "Jetpack Compose", "Room", "MVVM"]
     },
@@ -59,7 +59,7 @@ export default function Careers() {
       badgeText: "OPEN",
       badgeColorStyle: "bg-green-500 text-navy-darkest",
       title: "Full Stack Developer",
-      typeLabel: "Full-time · Chennai · Equity",
+      typeLabel: "Full-time · Madurai · Equity",
       desc: "React + Node.js developer with strong opinions about simplicity. Will work across web products and internal tooling.",
       skills: ["React", "TypeScript", "Node.js", "PostgreSQL"]
     },
@@ -67,7 +67,7 @@ export default function Careers() {
       badgeText: "FUTURE",
       badgeColorStyle: "bg-gray-mid text-white-soft opacity-70",
       title: "Product Designer",
-      typeLabel: "Future Opening · Chennai",
+      typeLabel: "Future Opening · Madurai",
       desc: "A designer who sweats the details and can't sleep when a flow has unnecessary friction. Figma-first, user-obsessed, privacy-aware.",
       skills: ["Figma", "UX Research", "Design Systems"]
     }
@@ -126,7 +126,7 @@ export default function Careers() {
             >
                <h4 className="font-rajdhani text-white-soft uppercase font-bold tracking-widest mb-4">What we look for</h4>
                <ul className="space-y-3 font-nunito text-gray-mid text-[0.95rem]">
-                 {["You've built and shipped something real", "You care more about the user than the tech", "You can work independently and own decisions", "Privacy and ethics matter to you by default", "You're based in or willing to relocate to Chennai"].map((item, i) => (
+                 {["You've built and shipped something real", "You care more about the user than the tech", "You can work independently and own decisions", "Privacy and ethics matter to you by default", "You're based in or willing to relocate to Madurai"].map((item, i) => (
                    <li key={i} className="flex flex-start gap-3">
                      <span className="text-gold-primary pt-0.5">✓</span> {item}
                    </li>
