@@ -41,7 +41,7 @@ export default function HomeHero() {
           {/* Eyebrow badge */}
           <motion.div variants={scaleIn} className="inline-flex items-center gap-2 border border-gold-primary/50 bg-navy-dark rounded-full px-4 py-1.5 mb-6">
             <span className="font-rajdhani uppercase text-gold-primary font-bold text-xs tracking-widest">
-              ✦ Product-Focused · Privacy-First · Chennai, India
+              ✦ Product-Focused · Privacy-First · Madurai, India
             </span>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function HomeHero() {
 
           {/* Subtitle */}
           <motion.p variants={fadeUp(0.5)} initial="hidden" animate="show" className="font-nunito text-gray-mid text-[1.1rem] max-w-[540px] leading-[1.8] mb-8">
-            RedGoldCrew is a small, focused team of engineers and designers based in Chennai, India.
+            RedGoldCrew is a small, focused team of engineers and designers based in Madurai, India.
             We don't build products for investors or trend reports — we build tools that real people open
             every single day because they actually help.
           </motion.p>

@@ -33,7 +33,7 @@ export default function HomeFooter() {
               </div>
             </Link>
             <p className="font-nunito text-gray-mid text-[0.88rem] leading-[1.6] mb-6">
-              Building privacy-first, offline-capable products that solve real everyday problems for real people. Based in Chennai, Tamil Nadu, India.
+              Building privacy-first, offline-capable products that solve real everyday problems for real people. Based in Madurai, Tamil Nadu, India.
             </p>
             
             <div className="flex gap-3 mb-4">
@@ -46,7 +46,7 @@ export default function HomeFooter() {
             </div>
 
             <div className="font-nunito text-gray-mid text-[0.82rem] flex items-center gap-2">
-              <span>📍</span> Chennai, Tamil Nadu, India
+              <span>📍</span> Madurai, Tamil Nadu, India
             </div>
           </RevealItem>
 
@@ -111,7 +111,7 @@ export default function HomeFooter() {
           <div className="font-nunito text-[0.85rem] text-gray-mid flex items-center gap-1.5">
             Built with <span className="text-red-bright text-lg leading-none animate-pulse">♥</span> for India 🇮🇳
           </div>
-          <div className="font-nunito text-[0.85rem] text-gray-mid">Made in Chennai, Tamil Nadu</div>
+          <div className="font-nunito text-[0.85rem] text-gray-mid">Made in Madurai, Tamil Nadu</div>
         </div>
         </Reveal>
       </div>

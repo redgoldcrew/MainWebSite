@@ -80,9 +80,9 @@ export default function Team() {
     },
     {
       avatarGradient: "linear-gradient(135deg,#d4a017,#7a5800)",
-      initials: "SY",
+      initials: "KN",
       name: "Nanthitha",
-      badgeText: "CO-FOUNDER",
+      badgeText: "Coder",
       badgeColorStyle: "bg-gold-primary text-navy-darkest",
       roleTitle: "Product Strategist",
       bio: "Co-leads the product vision and company direction at RedGoldCrew. Brings strategic clarity to every product decision — ensuring that what gets built actually solves the problem it set out to solve, for the people it was built for.",
