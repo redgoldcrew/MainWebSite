@@ -4,6 +4,9 @@ import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
 import AayiramPage from './pages/AayiramPage';
 import HomePage from './pages/HomePage';
+import IndruHomePage from './pages/IndruHomePage';
+import IndruPrivacyPage from './pages/IndruPrivacyPage';
+import IndruTermsPage from './pages/IndruTermsPage';
 import ParticleBackground from './components/ParticleBackground';
 
 function ScrollToTop() {
@@ -38,6 +41,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aayiram" element={<AayiramPage />} />
+          <Route path="/indru" element={<IndruHomePage />} />
+          <Route path="/indru/privacy" element={<IndruPrivacyPage />} />
+          <Route path="/indru/terms" element={<IndruTermsPage />} />
         </Routes>
       </div>
     </Router>
