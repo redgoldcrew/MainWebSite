@@ -43,6 +43,37 @@ const steps = [
   'Stay on time – Get smart reminders and never miss what matters.',
 ];
 
+const problems = [
+  'Forgetting important tasks or deadlines',
+  'Not knowing where to start their day',
+  'Losing motivation to follow routines',
+  'Using too many different apps for planning, tasks, and habits',
+  'Not seeing their progress over time',
+];
+
+const audiences = [
+  'Plan their day, week, and month with clarity',
+  'Stay organized and focused on what matters',
+  'Build healthy daily routines and habits',
+  'Track their progress and see real growth',
+  'Reduce stress and feel more in control of their time',
+];
+
+const coreIdeas = [
+  {
+    title: 'Plan Your Day',
+    description: 'Start each morning with a clear view of your tasks and priorities. Add tasks, set due dates, and organize your schedule in a simple, visual way.',
+  },
+  {
+    title: 'Build Better Routines',
+    description: 'Create daily, weekly, and monthly habits that support your goals. Track your streaks and stay motivated to keep going.',
+  },
+  {
+    title: 'Track Your Progress',
+    description: 'See what you’ve completed, what’s pending, and how you’re improving over time. Weekly and monthly insights help you understand your patterns and plan smarter.',
+  },
+];
+
 const faqs = [
   {
     question: 'What is Indru?',
@@ -129,11 +160,48 @@ export default function IndruHomePage() {
       </section>
 
       <section className="mt-16 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">Why Indru?</p>
-          <h3 className="mt-3 text-3xl font-semibold text-white">In a world of complex tools and endless features, Indru keeps things simple.</h3>
+        <div className="max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">The Purpose of Indru</p>
+          <h3 className="mt-3 text-3xl font-semibold text-white">Why Indru Exists</h3>
           <p className="mt-4 text-lg leading-8 text-slate-300">
-            It helps you focus on what matters most: today. With a clean design, smart task management, and gentle reminders, Indru makes planning your day feel effortless.
+            In today’s fast-paced world, it’s easy to feel overwhelmed by tasks, routines, and responsibilities. Many planning tools are either too simple to be useful or too complex to stick with. People end up jumping between apps, forgetting important tasks, and losing track of their progress.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-slate-300">
+            <span className="font-semibold text-white">Indru was created to solve this problem.</span> Indru is designed to help you plan your day with clarity, build consistent routines, and stay on track — without the stress of complicated features or cluttered screens. It’s a planner that feels calm, focused, and personal.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-24 grid gap-6 lg:grid-cols-2">
+        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">What Problem Does Indru Solve?</p>
+          <h3 className="mt-3 text-2xl font-semibold text-white">Most people struggle with:</h3>
+          <ul className="mt-5 space-y-3 text-slate-300">
+            {problems.map((problem) => (
+              <li key={problem} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-navy-darkest/70 px-4 py-3 text-sm leading-7">
+                <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-gold-primary" />
+                <span>{problem}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm leading-7 text-slate-300">
+            Indru brings everything together in one simple place. Instead of managing multiple tools, you get a single app that helps you organize your day, track your tasks, and build habits that last.
+          </p>
+        </div>
+
+        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">Who Is Indru For?</p>
+          <h3 className="mt-3 text-2xl font-semibold text-white">Indru is for anyone who wants to:</h3>
+          <ul className="mt-5 space-y-3 text-slate-300">
+            {audiences.map((audience) => (
+              <li key={audience} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-navy-darkest/70 px-4 py-3 text-sm leading-7">
+                <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-red-primary" />
+                <span>{audience}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm leading-7 text-slate-300">
+            Whether you’re a student, professional, homemaker, or someone who simply wants to live more intentionally, Indru helps you plan better and live clearer.
           </p>
         </div>
       </section>
@@ -154,9 +222,22 @@ export default function IndruHomePage() {
       </section>
 
       <section className="mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-8 shadow-2xl shadow-black/20">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">How It Works</p>
-          <div className="mt-6 space-y-4">
+        <div className="max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">How Indru Helps You</p>
+          <h3 className="mt-3 text-3xl font-semibold text-white">Indru is built around three core ideas:</h3>
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {coreIdeas.map((idea, index) => (
+              <div key={idea.title} className="rounded-[1.5rem] border border-white/10 bg-navy-darkest/70 p-5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-red-primary to-gold-primary text-sm font-semibold text-white">
+                  {index + 1}
+                </div>
+                <h4 className="mt-4 text-lg font-semibold text-white">{idea.title}</h4>
+                <p className="mt-2 text-sm leading-7 text-slate-300">{idea.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 space-y-4">
             {steps.map((step, index) => (
               <div key={step} className="flex gap-4 rounded-2xl border border-white/10 bg-navy-darkest/70 p-4">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-red-primary to-gold-primary text-sm font-semibold text-white">
@@ -187,8 +268,14 @@ export default function IndruHomePage() {
       </section>
 
       <section className="mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-8 shadow-2xl shadow-black/20 text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">Call to Action</p>
-        <h3 className="mt-3 text-3xl font-semibold text-white">Start planning your day with clarity.</h3>
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">The Indru Difference</p>
+        <h3 className="mt-3 text-3xl font-semibold text-white">Unlike other planner apps, Indru focuses on simplicity, clarity, and calm.</h3>
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+          There are no overwhelming features, no complex setups, and no distractions. Just a clean, focused experience that helps you plan your day and build better habits.
+        </p>
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gold-primary">
+          <span className="font-semibold text-white">Indru believes that when you plan your day clearly, you live more intentionally.</span>
+        </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a href="#" className="rounded-full bg-gradient-to-r from-red-primary to-gold-primary px-5 py-3 font-semibold text-white transition hover:opacity-90">
             Get the App
@@ -196,6 +283,16 @@ export default function IndruHomePage() {
           <a href="#" className="rounded-full border border-white/15 bg-white/10 px-5 py-3 font-semibold text-slate-100 transition hover:bg-white/20">
             Download on Google Play
           </a>
+        </div>
+      </section>
+
+      <section className="mt-24 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
+        <div className="max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-primary">Our Vision</p>
+          <h3 className="mt-3 text-3xl font-semibold text-white">Helping people feel more organized, focused, and consistent every day.</h3>
+          <p className="mt-4 text-lg leading-8 text-slate-300">
+            Our vision is to help people around the world feel more organized, focused, and consistent in their daily lives. We believe that small, consistent actions lead to big changes over time. Indru is here to support you on that journey — one day at a time.
+          </p>
         </div>
       </section>
 
