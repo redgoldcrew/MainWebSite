@@ -17,18 +17,29 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
-  const [loading, setLoading] = useState(true);
+function AppContent() {
+  const { pathname } = useLocation();
+  const [loading, setLoading] = useState(!pathname.startsWith('/indru'));
+  const isIndruRoute = pathname.startsWith('/indru');
+
+  useEffect(() => {
+    setLoading(!isIndruRoute);
+  }, [isIndruRoute]);
+
+  useEffect(() => {
+    if (!isIndruRoute) {
+      const timer = window.setTimeout(() => setLoading(false), 1800);
+      return () => window.clearTimeout(timer);
+    }
+  }, [isIndruRoute]);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <LoadingScreen onComplete={() => setLoading(false)} />
-      
-      <div className={`transition-opacity duration-1000 ${loading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100'}`}>
+    <>
+      {!isIndruRoute && <LoadingScreen onComplete={() => setLoading(false)} />}
+
+      <div className={`relative min-h-screen transition-opacity duration-1000 ${loading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100'}`}>
         <CustomCursor />
-        
-        {/* Global fixed noise overlay as requested */}
+
         <div className="fixed inset-0 pointer-events-none z-[0] bg-navy-darkest">
           <div className="absolute inset-x-0 -top-[300px] h-[600px] bg-red-primary/10 rounded-[100%] blur-[120px] mix-blend-screen opacity-50" />
           <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-gold-primary/10 rounded-full blur-[100px] mix-blend-screen opacity-30" />
@@ -46,6 +57,15 @@ export default function App() {
           <Route path="/indru/terms" element={<IndruTermsPage />} />
         </Routes>
       </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
     </Router>
   );
 }
