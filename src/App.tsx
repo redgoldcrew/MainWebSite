@@ -5,8 +5,10 @@ import CustomCursor from './components/CustomCursor';
 import AayiramPage from './pages/AayiramPage';
 import HomePage from './pages/HomePage';
 import IndruHomePage from './pages/IndruHomePage';
-import IndruPrivacyPage from './pages/IndruPrivacyPage';
-import IndruTermsPage from './pages/IndruTermsPage';
+import UllaPage from './pages/UllaPage';
+import ProductLegalPage from './pages/ProductLegalPage';
+import AayiramPrivacyPage from './pages/AayiramPrivacyPage';
+import UllaDeletionPage from './pages/UllaDeletionPage';
 import ParticleBackground from './components/ParticleBackground';
 
 function ScrollToTop() {
@@ -19,23 +21,23 @@ function ScrollToTop() {
 
 function AppContent() {
   const { pathname } = useLocation();
-  const [loading, setLoading] = useState(!pathname.startsWith('/indru'));
-  const isIndruRoute = pathname.startsWith('/indru');
+  const isStandaloneProductRoute = pathname.startsWith('/indru') || pathname.startsWith('/ulla');
+  const [loading, setLoading] = useState(!isStandaloneProductRoute);
 
   useEffect(() => {
-    setLoading(!isIndruRoute);
-  }, [isIndruRoute]);
+    setLoading(!isStandaloneProductRoute);
+  }, [isStandaloneProductRoute]);
 
   useEffect(() => {
-    if (!isIndruRoute) {
+    if (!isStandaloneProductRoute) {
       const timer = window.setTimeout(() => setLoading(false), 1800);
       return () => window.clearTimeout(timer);
     }
-  }, [isIndruRoute]);
+  }, [isStandaloneProductRoute]);
 
   return (
     <>
-      {!isIndruRoute && <LoadingScreen onComplete={() => setLoading(false)} />}
+      {!isStandaloneProductRoute && <LoadingScreen onComplete={() => setLoading(false)} />}
 
       <div className={`relative min-h-screen transition-opacity duration-1000 ${loading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100'}`}>
         <CustomCursor />
@@ -52,9 +54,13 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aayiram" element={<AayiramPage />} />
+          <Route path="/aayiram/privacy" element={<AayiramPrivacyPage />} />
+          <Route path="/aayiram/:document" element={<ProductLegalPage product="aayiram" />} />
+          <Route path="/ulla" element={<UllaPage />} />
+          <Route path="/ulla/:document" element={<ProductLegalPage product="ulla" />} />
+          <Route path="/ulla/account-deletion" element={<UllaDeletionPage />} />
           <Route path="/indru" element={<IndruHomePage />} />
-          <Route path="/indru/privacy" element={<IndruPrivacyPage />} />
-          <Route path="/indru/terms" element={<IndruTermsPage />} />
+          <Route path="/indru/:document" element={<ProductLegalPage product="indru" />} />
         </Routes>
       </div>
     </>

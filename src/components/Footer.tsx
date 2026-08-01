@@ -52,13 +52,8 @@ export default function Footer() {
           <RevealItem>
             <h4 className="font-rajdhani uppercase text-white-soft font-bold tracking-widest mb-6 border-b border-border-red/50 pb-2 inline-block">Legal</h4>
             <ul className="flex flex-col gap-3">
-              {['Privacy Policy', 'Terms of Use', 'SMS Policy', 'Support'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-mid hover:text-gold-primary transition-colors font-nunito text-[0.9rem]">
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li><Link to="/aayiram/privacy" className="text-gray-mid hover:text-gold-primary transition-colors font-nunito text-[0.9rem]">Privacy Policy</Link></li>
+              <li><Link to="/aayiram/terms" className="text-gray-mid hover:text-gold-primary transition-colors font-nunito text-[0.9rem]">Terms of Use</Link></li>
             </ul>
           </RevealItem>
 

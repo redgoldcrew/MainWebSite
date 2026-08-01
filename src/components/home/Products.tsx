@@ -1,38 +1,43 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import indruLogo from '../../assets/Indrulogo.png';
+import ullaLogo from '../../assets/Ullalogo.png';
 
 export default function Products() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const pipeline = [
+  const products = [
     {
       num: "02",
-      statusBadge: "🔴 IN DEVELOPMENT",
-      icon: "🌐",
-      name: "Web Platform",
-      cat: "Web App · Full Stack",
-      desc: "A web-based productivity tool currently in active development by the RedGoldCrew team. Details will be announced when we're closer to a public beta. Building quietly — shipping loudly.",
-      tags: ["Web", "React", "Coming 2025"]
+      statusBadge: "🟢 AVAILABLE",
+      icon: ullaLogo,
+      name: "Ulla",
+      cat: "Android · Group Trip Planner",
+      desc: "A shared trip hub for planning group adventures. Organize participants, expenses, tasks, and the details that keep everyone travelling together.",
+      tags: ["Android", "Firebase", "Group Travel"],
+      to: "/ulla",
     },
     {
       num: "03",
-      statusBadge: "🟡 PLANNING",
-      icon: "📱",
-      name: "Second Android App",
-      cat: "Android · Kotlin",
-      desc: "Our second Android application is in the planning phase. Like Aayiram, it will be privacy-first and offline-capable. Solving a problem in a completely different domain.",
-      tags: ["Android", "Kotlin", "Planning"]
+      statusBadge: "🟢 AVAILABLE",
+      icon: indruLogo,
+      name: "Indru",
+      cat: "Android · Daily Planner",
+      desc: "A simple, calm planner for organizing tasks, building routines, and tracking progress without the clutter.",
+      tags: ["Android", "Planner", "Habits"],
+      to: "/indru",
     },
     {
       num: "04",
-      statusBadge: "⚪ IDEATION",
-      icon: "🛠️",
-      name: "Developer Utility",
-      cat: "Open Source · CLI Tool",
-      desc: "A command-line or developer-facing tool we're in early ideation for. Born from frustrations we face in our own development workflow. Will be open-sourced on GitHub when ready.",
-      tags: ["Open Source", "CLI", "Ideation"]
+      statusBadge: "🟢 COMPLETED",
+      icon: "🔥",
+      name: "Anbu Fire Part Works",
+      cat: "Website · SEO · Responsive Design",
+      desc: "A fire-safety equipment and services website built with React, HTML/CSS, and TypeScript. SEO work covered keyword research, metadata, image optimization, structured content, and technical improvements — helping targeted keywords reach Google’s first page.",
+      tags: ["React", "TypeScript", "SEO"],
+      href: "https://anbufirepartworks.com/",
     }
   ];
 
@@ -212,11 +217,11 @@ export default function Products() {
             viewport={{ once: true }}
             className="font-rajdhani uppercase text-gold-primary font-bold text-center tracking-widest text-sm mb-10"
           >
-            — What's Coming Next —
+            — More From RedGoldCrew —
           </motion.h4>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pipeline.map((p, i) => (
+            {products.map((p, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -234,8 +239,8 @@ export default function Products() {
                 </div>
 
                 <div className="relative z-10">
-                  <div className="w-11 h-11 rounded-full border border-red-primary flex items-center justify-center text-xl mb-4 bg-navy-darkest group-hover:border-gold-primary transition-colors">
-                    {p.icon}
+                  <div className="w-11 h-11 rounded-full border border-red-primary flex items-center justify-center text-xl mb-4 bg-navy-darkest group-hover:border-gold-primary transition-colors overflow-hidden">
+                    {typeof p.icon === 'string' && p.icon.startsWith('/') ? <img src={p.icon} alt="" className="h-full w-full object-contain p-1" /> : p.icon}
                   </div>
                   
                   <h4 className="font-rajdhani uppercase text-white-soft font-bold text-[1.2rem] mb-1">
@@ -256,6 +261,16 @@ export default function Products() {
                       </span>
                     ))}
                   </div>
+                  {p.to && (
+                    <Link to={p.to} className="mt-6 inline-flex font-rajdhani text-sm font-bold uppercase tracking-wider text-gold-primary hover:text-white">
+                      Visit {p.name} →
+                    </Link>
+                  )}
+                  {p.href && (
+                    <a href={p.href} target="_blank" rel="noreferrer" className="mt-6 inline-flex font-rajdhani text-sm font-bold uppercase tracking-wider text-gold-primary hover:text-white">
+                      Visit website ↗
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
